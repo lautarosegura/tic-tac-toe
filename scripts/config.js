@@ -1,6 +1,5 @@
 function openPlayerConfig(event) {
 	editedPlayer = +event.target.dataset.playerid;
-	console.log(editedPlayer);
 	playerConfigOverlayElement.style.display = 'block';
 	backdropElement.style.display = 'block';
 }
@@ -29,4 +28,16 @@ function savePlayerConfig(event) {
 	players[editedPlayer - 1].name = enteredPlayerName;
 
 	closePlayerConfig();
+}
+
+function openErrorModal(message) {
+	errorMessageElement.textContent = message;
+	errorModalElement.style.display = 'block';
+	backdropElement.style.display = 'block';
+}
+
+function closeErrorModal() {
+	errorMessageElement.textContent = '';
+	errorModalElement.style.display = 'none';
+	backdropElement.style.display = 'none';
 }

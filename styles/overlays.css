@@ -20,6 +20,10 @@
 	display: none;
 }
 
+#error-overlay.modal {
+	text-align: center;
+}
+
 @media (min-width: 48rem) {
 	.modal {
 		left: calc(50% - 20rem);

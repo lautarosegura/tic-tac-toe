@@ -42,6 +42,10 @@
 					</div>
 				</form>
 			</aside>
+			<aside class="modal" id="error-overlay">
+				<p id="error-message"></p>
+				<button type="button" class="btn btn-alt" id="close-modal-btn">Close</button>
+			</aside>
 			<section id="game-configuration">
 				<ol>
 					<li>
@@ -83,17 +87,17 @@
 
 				<p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
 				<ol id="game-board">
-					<li></li>
-					<li></li>
-					<li></li>
+					<li data-row="1" data-col="1"></li>
+					<li data-row="1" data-col="2"></li>
+					<li data-row="1" data-col="3"></li>
 
-					<li></li>
-					<li></li>
-					<li></li>
+					<li data-row="2" data-col="1"></li>
+					<li data-row="2" data-col="2"></li>
+					<li data-row="2" data-col="3"></li>
 
-					<li></li>
-					<li></li>
-					<li></li>
+					<li data-row="3" data-col="1"></li>
+					<li data-row="3" data-col="2"></li>
+					<li data-row="3" data-col="3"></li>
 				</ol>
 			</section>
 		</main>
