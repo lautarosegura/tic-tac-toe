@@ -27,6 +27,11 @@ function savePlayerConfig(event) {
 	updatedPlayerData.children[1].textContent = enteredPlayerName;
 	players[editedPlayer - 1].name = enteredPlayerName;
 
+	if (!gameIsOver) {
+		activePlayerNameElement.textContent = enteredPlayerName;
+		updatedPlayerData.children[1].textContent = enteredPlayerName;
+	}
+
 	closePlayerConfig();
 }
 

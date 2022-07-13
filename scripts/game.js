@@ -7,9 +7,9 @@ function resetGameStatus() {
 
 	let gameboardIndex = 0;
 	for (let i = 0; i < 3; i++) {
-		for (let j = 0; j < 3; j ++) {
+		for (let j = 0; j < 3; j++) {
 			gameData[i][j] = 0;
-			const gameboardItemElement = gameBoardElement.children[gameboardIndex]
+			const gameboardItemElement = gameBoardElement.children[gameboardIndex];
 			gameboardItemElement.textContent = '';
 			gameboardItemElement.classList.remove('disabled');
 			gameboardIndex++;
@@ -114,12 +114,13 @@ function checkForGameOver() {
 	return 0;
 }
 
-function endGame(winnerId){
+function endGame(winnerId) {
 	gameIsOver = true;
 	gameOverElement.style.display = 'block';
 	if (winnerId > 0) {
-		gameOverElement.firstElementChild.firstElementChild.textContent = players[winnerId - 1].name;
+		gameOverElement.firstElementChild.firstElementChild.textContent =
+			players[winnerId - 1].name;
 	} else {
-		gameOverElement.firstElementChild.textContent = 'It\'s a draw!';
+		gameOverElement.firstElementChild.textContent = "It's a draw!";
 	}
 }
